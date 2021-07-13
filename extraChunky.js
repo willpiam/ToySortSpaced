@@ -43,14 +43,15 @@ function swapInArr(_arr, i, k) {
 }
 
 console.log(`TRY AND REMOVE COLOR CLUMPS`);
+
+for (let p = 0; p < 4; p++)
+	for (let i = 0; i < arr.length - 1; i++)
+		if (arr[i].color === arr[i + 1].color)
+			for (let k = i + 1; k < arr.length; k++) {
+				if (arr[i].color === arr[k].color)
+					continue;
+				swapInArr(arr, i + 1, k);
+				break;
+			}
+
 console.log(arr);
-
-for (let i = 0; i < arr.length - 1; i++)
-	if (arr[i].color === arr[i + 1].color)
-		for (let k = i + 1; k < arr.length; k++) {
-			if (arr[i].color === arr[k].color)
-				continue;
-			swapInArr(arr, i + 1, k);
-			break;
-		}
-
