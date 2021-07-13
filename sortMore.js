@@ -99,7 +99,7 @@ console.log(arr);
 console.log(`${arr.length} elements`);
 
 
-
+/*
 console.log(`Now find any remining clumps and sort them by number`);
 
 for (let i = 0; i < arr.length - 1; i++) {
@@ -137,7 +137,7 @@ for (let i = 0; i < arr.length - 1; i++) {
 console.log(arr);
 console.log(`${arr.length} elements`);
 
-
+*/
 console.log(`Sort with names or something`);
 
 // get unique colors
