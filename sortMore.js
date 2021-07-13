@@ -33,8 +33,8 @@ console.log(`ORIGINAL ARRAY`);
 console.log(arr);
 
 console.log(`SORTED BY NUMBER ARRAY`);
-arr.sort((a, b) => a.number - b.number);
-console.log(arr);
+//arr.sort((a, b) => a.number - b.number);
+//console.log(arr);
 
 function swapInArr(_arr, i, k) {
 	[_arr[i], _arr[k]] = [_arr[k], _arr[i]];
