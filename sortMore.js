@@ -144,15 +144,10 @@ console.log(`Sort with names or something`);
 const colors = [... new Set(arr.map(el => el.color))];
 colors.forEach(color => {
 	for (let i = 0; i < arr.length; i++)
-		if (arr[i].color === color) {
-			for (let k = i; k < arr.length; k++) {
-				if (arr[k].color === color) {
-					if (arr[i].number > arr[k].number) {
-						swapInArr(arr, i, k);
-					}
-				}
-			}
-		}
+		if (arr[i].color === color)
+			for (let k = i; k < arr.length; k++)
+				if ((arr[k].color === color) && (arr[i].number > arr[k].number))
+					swapInArr(arr, i, k);
 });
 
 //console.log(colors);
