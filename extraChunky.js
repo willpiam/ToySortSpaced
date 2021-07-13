@@ -54,3 +54,19 @@ for (let i = 0; i < arr.length - 1; i++)
 		}
 
 console.log(arr);
+
+
+
+console.log(`Now go from back to front`);
+
+for (let i = arr.length - 1; i > 0; i--)
+	if (arr[i].color === arr[i - 1].color)
+		for (let k = i - 1; k >= 0; k--) {
+			if (arr[i].color === arr[k].color)
+				continue;
+			swapInArr(arr, i - 1, k);
+			break;
+		}
+
+
+console.log(arr);
