@@ -132,5 +132,30 @@ for (let i = 0; i < arr.length - 1; i++) {
 	i += clump.length - 1;
 }
 
+
+
+console.log(arr);
+console.log(`${arr.length} elements`);
+
+
+console.log(`Sort with names or something`);
+
+// get unique colors
+const colors = [... new Set(arr.map(el => el.color))];
+colors.forEach(color => {
+	for (let i = 0; i < arr.length; i++)
+		if (arr[i].color === color) {
+			for (let k = i; k < arr.length; k++) {
+				if (arr[k].color === color) {
+					if (arr[i].number > arr[k].number) {
+						swapInArr(arr, i, k);
+					}
+				}
+			}
+		}
+});
+
+//console.log(colors);
+
 console.log(arr);
 console.log(`${arr.length} elements`);
